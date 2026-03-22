@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naveed Ahmed | Career Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: #1e293b;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --border: rgba(148, 163, 184, 0.2);
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, #020617 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(2, 6, 23, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand { font-weight: 700; font-size: 1.1rem; }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    header {
+      padding: 5rem 0 3rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    h1, h2, h3 { line-height: 1.2; margin-top: 0; }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.8rem; }
+    h2 { font-size: 2rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.2rem; margin-bottom: 0.7rem; }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 680px;
+    }
+
+    .hero-card, .card {
+      background: rgba(30, 41, 59, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.4rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #082f49;
+      border-color: transparent;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+    }
+
+    section {
+      padding: 2rem 0 3rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .muted { color: var(--muted); }
+    .pill {
+      display: inline-block;
+      margin: 0.2rem 0.35rem 0.2rem 0;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      font-size: 0.9rem;
+    }
+
+    ul { padding-left: 1.2rem; }
+    li { margin-bottom: 0.4rem; }
+
+    .project-card h3 { margin-bottom: 0.35rem; }
+    .project-image {
+      width: 100%;
+      border-radius: 14px;
+      margin: 0.8rem 0 1rem;
+      border: 1px solid var(--border);
+      display: block;
+    }
+    .profile-image {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      display: block;
+      margin: 0 auto 1rem;
+      object-fit: cover;
+    }
+    .project-meta { color: var(--accent); font-size: 0.95rem; margin-bottom: 0.8rem; }
+
+    .timeline {
+      border-left: 2px solid rgba(56, 189, 248, 0.3);
+      padding-left: 1rem;
+    }
+
+    footer {
+      padding: 2rem 0 4rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">Naveed Ahmed</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#projects">Projects</a>
+        <a href="#capstone">Capstone</a>
+        <a href="#cover-letter">Cover Letter</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container hero">
+      <div>
+        <div class="badge">COMP3078 Portfolio Development Project</div>
+        <h1>Software Development Student Building Practical Web, Mobile, and Backend Solutions</h1>
+        <p class="lead">
+          Hi, I’m Naveed Ahmed, a Computer Programming & Analysis student at George Brown College in Toronto, Ontario. I build practical software solutions using Java, Spring Boot, Android, Kotlin, SQL, MongoDB, and modern web technologies. My academic and project work focuses on backend systems, mobile apps, APIs, and full-stack development.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="#resume">View Resume</a>
+          <a class="btn btn-secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="images/profile-photo.jpeg" alt="Portrait of Naveed Ahmed" class="profile-image" />
+        <h3>Portfolio Highlights</h3>
+        <ul>
+          <li>Advanced Diploma student in Computer Programming &amp; Analysis at George Brown College</li>
+          <li>Experience with Java, Spring Boot, Android, Kotlin, Node.js, SQL, MongoDB, Docker, and GitHub</li>
+          <li>Projects in mobile app development, microservices, GraphQL, REST APIs, and full-stack systems</li>
+          <li>Academic capstone work focused on real-world usability, health tracking, and system design</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>Bio</h2>
+      <p class="section-intro">
+        This portfolio represents my academic journey, technical development, project work, and future career goals in software development.
+      </p>
+      <div class="grid grid-2">
+        <div class="card">
+          <p>
+            I am a Computer Programming & Analysis student at George Brown College with hands-on experience building software projects in Java, Spring Boot, Kotlin, Android, Node.js, GraphQL, and database systems. I enjoy creating applications that solve real problems, especially in backend services, mobile development, and full-stack workflows.
+          </p>
+          <p>
+            Through coursework, labs, and capstone projects, I have strengthened my skills in software design, REST APIs, database integration, debugging, testing, Git-based collaboration, and documentation. I aim to continue growing as a software developer by building reliable and user-centered applications.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Technical Skills</h3>
+          <div>
+            <span class="pill">Java</span>
+            <span class="pill">Spring Boot</span>
+            <span class="pill">Kotlin</span>
+            <span class="pill">Android</span>
+            <span class="pill">Jetpack Compose</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">Express</span>
+            <span class="pill">GraphQL</span>
+            <span class="pill">MongoDB</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Docker</span>
+            <span class="pill">GitHub</span>
+            <span class="pill">REST APIs</span>
+            <span class="pill">HTML/CSS/JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="container">
+      <h2>Resume Summary</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Education</h3>
+          <p><strong>George Brown College</strong><br />Advanced Diploma in Computer Programming &amp; Analysis</p>
+          <p class="muted">Toronto, Ontario • Expected Graduation: April 2026</p>
+
+          <h3>Relevant Areas of Study</h3>
+          <ul>
+            <li>Object-Oriented Programming</li>
+            <li>Web Development and Full-Stack Development</li>
+            <li>Database Systems and Data Modeling</li>
+            <li>Mobile Application Development</li>
+            <li>Microservices and API Design</li>
+            <li>DevOps, CI, and Version Control</li>
+            <li>Cyber Security Fundamentals</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Core Strengths</h3>
+          <ul>
+            <li>Backend development with Java and Spring Boot</li>
+            <li>Android development with Kotlin and Jetpack Compose</li>
+            <li>API design using REST, GraphQL, and Express.js</li>
+            <li>Database integration with MongoDB, PostgreSQL, MySQL, and SQL</li>
+            <li>Version control and collaboration using Git and GitHub</li>
+            <li>Project documentation, planning, debugging, and technical communication</li>
+          </ul>
+
+          <p><strong>Resume PDF:</strong> Add your downloadable resume link here.</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/NaveedAhmed121" target="_blank">github.com/NaveedAhmed121</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="philosophy">
+    <div class="container">
+      <h2>Philosophy / Statement of Career Goal</h2>
+      <div class="card">
+        <p>
+          I believe software development is about solving meaningful problems through creativity, discipline, and continuous improvement. My motivation comes from building tools that make tasks easier, more efficient, and more useful for real users. Through my academic journey, I have learned that growth in technology does not come only from success, but also from challenge, debugging, teamwork, and persistence. These experiences have strengthened my adaptability, technical confidence, and commitment to becoming a dependable developer.
+        </p>
+        <p>
+          My career goal is to grow into a software developer who can contribute to backend, mobile, and full-stack systems while continuing to improve my skills in system design, APIs, cloud tools, and real-world software delivery. I want my work to reflect both technical ability and practical value. In the future, I hope to contribute to teams that build reliable, user-centered applications and to continue evolving through lifelong learning and hands-on experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="container">
+      <h2>Academic Credentials</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Current Education</h3>
+          <ul>
+            <li>Program: Advanced Diploma in Computer Programming &amp; Analysis</li>
+            <li>Institution: George Brown College</li>
+            <li>Location: Toronto, Ontario</li>
+            <li>Expected Graduation: April 2026</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Previous Education</h3>
+          <ul>
+            <li>Diploma in Civil Engineering</li>
+            <li>Institution: Nawab Shah Alam Khan College of Engineering and Technology</li>
+            <li>Country: India</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Academic Work Samples</h2>
+      <p class="section-intro">This section highlights major academic projects that demonstrate my development skills, documentation ability, technical growth, and problem-solving approach.</p>
+      <div class="grid grid-2">
+        <div class="card project-card">
+          <h3>Capstone-SnapCal</h3>
+          <img src="images/snapcal-dashboard.jpeg" alt="SnapCal dashboard screen" class="project-image" />
+          <div class="project-meta">COMP3097 Capstone | Kotlin | Android Studio | Jetpack Compose | Health Features</div>
+          <p>SnapCal is a mobile wellness and nutrition tracking application designed to support meal logging, hydration tracking, and healthier daily habits through a clean mobile interface.</p>
+          <ul>
+            <li>Built as an Android project with Kotlin and Jetpack Compose</li>
+            <li>Repository includes an <code>app</code> module plus supporting Gradle files and HTML preview files</li>
+            <li>Project languages shown on GitHub are mainly HTML and Kotlin</li>
+          </ul>
+          <p><strong>My Role:</strong> Major contributor to feature development, debugging, UI integration, and overall project implementation.</p>
+          <p><strong>Artifacts:</strong> <a href="https://github.com/NaveedAhmed121/Capstone-SnapCal" target="_blank">GitHub Repository</a></p>
+          <img src="images/snapcal-menu.jpeg" alt="SnapCal healthy menu screen" class="project-image" />
+          <img src="images/snapcal-meal-plan.jpeg" alt="SnapCal weekly meal plan screen" class="project-image" />
+          <img src="images/snapcal-progress.jpeg" alt="SnapCal progress tracking screen" class="project-image" />
+        </div>
+
+        <div class="card project-card">
+          <h3>COMP3095 Microservices Project</h3>
+          <div class="project-meta">COMP3095 | Java | Spring Boot | Docker | Databases</div>
+          <p>A backend-focused academic project centered on microservices concepts, service structure, API design, and containerized development workflows.</p>
+          <ul>
+            <li>Applied Spring Boot and backend service design concepts during the course</li>
+            <li>Worked with database integration, modular project structure, and Docker-based development</li>
+            <li>Strengthened debugging, Gradle configuration, and backend documentation skills</li>
+          </ul>
+          <p><strong>My Role:</strong> Backend implementation, troubleshooting, project setup, and documentation.</p>
+          <p><strong>Artifacts:</strong> Add screenshots, diagrams, and any final repo link you want to feature.</p>
+        </div>
+
+        <div class="card project-card">
+          <h3>Comp3133-lab05</h3>
+          <img src="images/graphql-movies-query.png" alt="GraphQL movies query result screenshot" class="project-image" />
+          <div class="project-meta">COMP3133 | JavaScript | Node.js | GraphQL | MongoDB</div>
+          <p>This repository contains a GraphQL-based backend lab with folders for models, resolvers, and schemas, plus <code>db.js</code>, <code>index.js</code>, and sample movie records for testing.</p>
+          <ul>
+            <li>Implemented GraphQL query structure and resolver-based backend organization</li>
+            <li>Connected application logic with MongoDB</li>
+            <li>Worked with sample movie records and API testing</li>
+          </ul>
+          <p><strong>My Role:</strong> Implemented the lab, connected the database layer, and tested/debugged the API.</p>
+          <p><strong>Artifacts:</strong> <a href="https://github.com/NaveedAhmed121/Comp3133-lab05" target="_blank">GitHub Repository</a></p>
+        </div>
+
+        <div class="card project-card">
+          <h3>comp3133-lab03-restaurant-database</h3>
+          <img src="images/rest-api-validation.png" alt="REST API validation test screenshot" class="project-image" />
+          <div class="project-meta">COMP3133 | JavaScript | Node.js | Express | MongoDB</div>
+          <p>This backend project is organized with <code>models</code> and <code>routes</code> folders plus a <code>server.js</code> file, showing a structured Express and MongoDB restaurant API implementation.</p>
+          <ul>
+            <li>Built route-based backend logic for a restaurant database application</li>
+            <li>Used MongoDB data modeling concepts</li>
+            <li>Practiced API structure, request handling, and environment configuration</li>
+          </ul>
+          <p><strong>My Role:</strong> Completed implementation, testing, and GitHub submission.</p>
+          <p><strong>Artifacts:</strong> <a href="https://github.com/NaveedAhmed121/comp3133-lab03-restaurant-database" target="_blank">GitHub Repository</a></p>
+        </div>
+
+        <div class="card project-card">
+          <h3>COMP3104Group43Assignment</h3>
+          <img src="images/devops-repository.png" alt="DevOps assignment repository screenshot" class="project-image" />
+          <div class="project-meta">COMP3104 DevOps | GitHub | CI | Workflow Automation</div>
+          <p>This repository documents a DevOps assignment focused on Git branching, pull requests, continuous integration, and GitHub Actions workflow automation.</p>
+          <ul>
+            <li>Includes a GitHub Actions workflow in <code>.github/workflows/ci.yml</code></li>
+            <li>README documents workflow triggers, steps, and included files</li>
+            <li>Lists Naveed Ahmed as Developer / Contributor for Group 43</li>
+          </ul>
+          <p><strong>My Role:</strong> Developer / Contributor, repository setup, workflow contribution, and documentation.</p>
+          <p><strong>Artifacts:</strong> <a href="https://github.com/NaveedAhmed121/COMP3104Group43Assignment" target="_blank">GitHub Repository</a></p>
+        </div>
+
+        <div class="card project-card">
+          <h3>COMP3133_101416034_Assignment1</h3>
+          <div class="project-meta">COMP3133 | JavaScript | GraphQL | Node.js</div>
+          <p>This assignment repository includes <code>schema.js</code>, <code>server.js</code>, resolver files, and a README titled <code>101416034_COMP3133_Assignment1</code>, showing a structured GraphQL assignment implementation.</p>
+          <ul>
+            <li>Worked with GraphQL schema and resolver architecture</li>
+            <li>Implemented backend logic in JavaScript</li>
+            <li>Strengthened API design and server setup skills</li>
+          </ul>
+          <p><strong>My Role:</strong> Complete implementation and submission of the assignment.</p>
+          <p><strong>Artifacts:</strong> <a href="https://github.com/NaveedAhmed121/COMP3133_101416034_Assignment1" target="_blank">GitHub Repository</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capstone">
+    <div class="container">
+      <h2>Capstone Project</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Project Summary</h3>
+          <p>SnapCal is a mobile wellness application designed to help users track nutrition-related habits such as meals and water intake in a simple and structured way. The public repository includes an Android app module, Gradle project files, and HTML preview files that support the project presentation and interface planning.</p>
+
+          <h3>Project Vision</h3>
+          <p>
+            The vision of the project is to create a user-friendly mobile application that supports healthier daily habits through practical tracking tools and an accessible mobile interface.
+          </p>
+
+          <h3>Project / Business Requirements</h3>
+          <ul>
+            <li>Allow users to log daily wellness information</li>
+            <li>Support an organized and easy-to-use interface</li>
+            <li>Store and retrieve user data efficiently</li>
+            <li>Provide useful feedback through the application</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Project Plan</h3>
+          <div class="timeline">
+            <p><strong>1.</strong> Requirement gathering and feature planning</p>
+            <p><strong>2.</strong> Wireframe and interface design</p>
+            <p><strong>3.</strong> System architecture and implementation</p>
+            <p><strong>4.</strong> Testing, debugging, and refinement</p>
+            <p><strong>5.</strong> Final presentation and deployment preparation</p>
+          </div>
+
+          <h3>Requirements Analysis and Design</h3>
+          <p>Include functional requirements, non-functional requirements, and design decisions used during development.</p>
+
+          <h3>Wireframes / Mockups / Status Reports / System Implementation</h3>
+          <p>Add screenshots, diagrams, milestone summaries, and implementation details here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="professional-summary">
+    <div class="container">
+      <h2>Professional Summary</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <p>
+            In addition to my academic development, I have built transferable professional skills through real work experience in customer-focused environments. These experiences strengthened my communication, accountability, attention to detail, reliability, and ability to work under pressure.
+          </p>
+          <p>
+            I bring both technical learning and real-world responsibility to my professional growth, and I continue to develop the confidence and discipline needed to succeed in team-based software environments.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Optional Additions</h3>
+          <ul>
+            <li>Professional work samples if available</li>
+            <li>Volunteer or community service work</li>
+            <li>Letters of recommendation</li>
+            <li>Awards and recognition</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cover-letter">
+    <div class="container">
+      <h2>Cover Letter Template</h2>
+      <div class="card">
+        <p>Dear Hiring Manager,</p>
+        <p>
+          I am writing to express my interest in a Junior Software Developer position. As a Computer Programming & Analysis student at George Brown College, I have developed practical experience in Java, Spring Boot, Android development, REST APIs, database systems, and collaborative software projects. Through academic coursework and capstone work, I have built applications that demonstrate problem-solving, technical adaptability, and a strong commitment to writing practical, maintainable software.
+        </p>
+        <p>
+          My experience includes backend development with Java and Spring Boot, mobile development using Kotlin and Android tools, and full-stack academic work involving databases, APIs, GitHub, and project documentation. I am especially interested in opportunities where I can continue growing as a developer while contributing to meaningful software solutions in a collaborative environment.
+        </p>
+        <p>
+          Thank you for your time and consideration. I would welcome the opportunity to discuss how my technical background, project experience, and motivation to learn can contribute to your team.
+        </p>
+        <p>Sincerely,<br />Naveed Ahmed</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Get in Touch</h3>
+          <p><strong>Email:</strong> <a href="mailto:naveedahmedquadri121@gmail.com">naveedahmedquadri121@gmail.com</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/NaveedAhmed121" target="_blank">github.com/NaveedAhmed121</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/naveed-ahmed-8b4046269/" target="_blank">linkedin.com/in/naveed-ahmed-8b4046269</a></p>
+          <p><strong>Location:</strong> Toronto, Ontario</p>
+        </div>
+        <div class="card">
+          <h3>Connect With Me</h3>
+          <ul>
+            <li>Portfolio Website</li>
+            <li>GitHub Projects</li>
+            <li>LinkedIn Profile</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Naveed Ahmed — Career Portfolio</p>
+    </div>
+  </footer>
+</body>
+</html>
