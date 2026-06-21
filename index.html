@@ -83,6 +83,19 @@
       font-size: 0.9rem;
     }
 
+    .badge-featured {
+      display: inline-block;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.15);
+      color: #86efac;
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.6rem;
+    }
+
     h1, h2, h3 { line-height: 1.2; margin-top: 0; }
     h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 0.8rem; }
     h2 { font-size: 2rem; margin-bottom: 1rem; }
@@ -100,6 +113,11 @@
       border-radius: 18px;
       padding: 1.4rem;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .card-featured {
+      border-color: rgba(34, 197, 94, 0.35);
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.15), 0 10px 30px rgba(0,0,0,0.25);
     }
 
     .cta-row {
@@ -156,6 +174,12 @@
       color: #bae6fd;
       border: 1px solid rgba(56, 189, 248, 0.25);
       font-size: 0.9rem;
+    }
+
+    .pill-green {
+      background: rgba(34, 197, 94, 0.12);
+      color: #86efac;
+      border-color: rgba(34, 197, 94, 0.25);
     }
 
     ul { padding-left: 1.2rem; }
@@ -216,9 +240,9 @@
     <div class="container hero">
       <div>
         <div class="badge">COMP3078 Portfolio Development Project</div>
-        <h1>Software Development Student Building Practical Web, Mobile, and Backend Solutions</h1>
+        <h1>Software Development Graduate Building AI Agents, Backend Systems, and Mobile Apps</h1>
         <p class="lead">
-          Hi, I’m Naveed Ahmed, a Computer Programming & Analysis student at George Brown College in Toronto, Ontario. I build practical software solutions using Java, Spring Boot, Android, Kotlin, SQL, MongoDB, and modern web technologies. My academic and project work focuses on backend systems, mobile apps, APIs, and full-stack development.
+          Hi, I'm Naveed Ahmed, a Computer Programming &amp; Analysis graduate from George Brown College in Toronto, Ontario. I build practical software using Python, Java, Spring Boot, Android, Kotlin, Docker, PostgreSQL, and the Anthropic Claude API. My work spans agentic AI systems, backend APIs, mobile apps, and containerized full-stack applications.
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#projects">View Projects</a>
@@ -230,10 +254,10 @@
         <img src="images/profile-photo.jpeg" alt="Portrait of Naveed Ahmed" class="profile-image" />
         <h3>Portfolio Highlights</h3>
         <ul>
-          <li>Advanced Diploma student in Computer Programming &amp; Analysis at George Brown College</li>
-          <li>Experience with Java, Spring Boot, Android, Kotlin, Node.js, SQL, MongoDB, Docker, and GitHub</li>
-          <li>Projects in mobile app development, microservices, GraphQL, REST APIs, and full-stack systems</li>
-          <li>Academic capstone work focused on real-world usability, health tracking, and system design</li>
+          <li>Advanced Diploma graduate — Computer Programming &amp; Analysis, George Brown College</li>
+          <li>Built an agentic AI pipeline using Python, Anthropic API, Docker, and PostgreSQL</li>
+          <li>Experience with Java, Spring Boot, Android, Kotlin, Node.js, SQL, MongoDB, and GitHub</li>
+          <li>Projects spanning mobile apps, microservices, GraphQL, REST APIs, and AI automation</li>
         </ul>
       </div>
     </div>
@@ -248,15 +272,20 @@
       <div class="grid grid-2">
         <div class="card">
           <p>
-            I am a Computer Programming & Analysis student at George Brown College with hands-on experience building software projects in Java, Spring Boot, Kotlin, Android, Node.js, GraphQL, and database systems. I enjoy creating applications that solve real problems, especially in backend services, mobile development, and full-stack workflows.
+            I am a Computer Programming &amp; Analysis graduate from George Brown College with hands-on experience building software projects in Python, Java, Spring Boot, Kotlin, Android, Node.js, GraphQL, and database systems. I enjoy creating applications that solve real problems, especially in backend services, AI automation, mobile development, and full-stack workflows.
           </p>
           <p>
-            Through coursework, labs, and capstone projects, I have strengthened my skills in software design, REST APIs, database integration, debugging, testing, Git-based collaboration, and documentation. I aim to continue growing as a software developer by building reliable and user-centered applications.
+            Through coursework, labs, and independent projects, I have strengthened my skills in software design, REST APIs, database integration, debugging, testing, Git-based collaboration, and documentation. I am actively seeking entry-level roles in Software Development, QA, or AI/ML Engineering.
           </p>
         </div>
         <div class="card">
           <h3>Technical Skills</h3>
           <div>
+            <span class="pill pill-green">Python</span>
+            <span class="pill pill-green">Anthropic API</span>
+            <span class="pill pill-green">pandas</span>
+            <span class="pill pill-green">Docker</span>
+            <span class="pill pill-green">PostgreSQL</span>
             <span class="pill">Java</span>
             <span class="pill">Spring Boot</span>
             <span class="pill">Kotlin</span>
@@ -266,11 +295,11 @@
             <span class="pill">Express</span>
             <span class="pill">GraphQL</span>
             <span class="pill">MongoDB</span>
-            <span class="pill">PostgreSQL</span>
             <span class="pill">SQL</span>
-            <span class="pill">Docker</span>
             <span class="pill">GitHub</span>
             <span class="pill">REST APIs</span>
+            <span class="pill">Postman</span>
+            <span class="pill">Jira</span>
             <span class="pill">HTML/CSS/JavaScript</span>
           </div>
         </div>
@@ -285,7 +314,7 @@
         <div class="card">
           <h3>Education</h3>
           <p><strong>George Brown College</strong><br />Advanced Diploma in Computer Programming &amp; Analysis</p>
-          <p class="muted">Toronto, Ontario • Expected Graduation: April 2026</p>
+          <p class="muted">Toronto, Ontario &bull; Graduated: April 2026</p>
 
           <h3>Relevant Areas of Study</h3>
           <ul>
@@ -301,12 +330,13 @@
         <div class="card">
           <h3>Core Strengths</h3>
           <ul>
+            <li>Agentic AI development with Python and the Anthropic Claude API</li>
             <li>Backend development with Java and Spring Boot</li>
             <li>Android development with Kotlin and Jetpack Compose</li>
             <li>API design using REST, GraphQL, and Express.js</li>
-            <li>Database integration with MongoDB, PostgreSQL, MySQL, and SQL</li>
+            <li>Database integration with PostgreSQL, MongoDB, MySQL, and SQL</li>
+            <li>Containerization with Docker and docker-compose</li>
             <li>Version control and collaboration using Git and GitHub</li>
-            <li>Project documentation, planning, debugging, and technical communication</li>
           </ul>
 
           <p><strong>Resume:</strong> <a href="Naveed_Ahmed_Resume.pdf" target="_blank">Download Resume PDF</a></p>
@@ -324,7 +354,7 @@
           I believe software development is about solving meaningful problems through creativity, discipline, and continuous improvement. My motivation comes from building tools that make tasks easier, more efficient, and more useful for real users. Through my academic journey, I have learned that growth in technology does not come only from success, but also from challenge, debugging, teamwork, and persistence. These experiences have strengthened my adaptability, technical confidence, and commitment to becoming a dependable developer.
         </p>
         <p>
-          My career goal is to grow into a software developer who can contribute to backend, mobile, and full-stack systems while continuing to improve my skills in system design, APIs, cloud tools, and real-world software delivery. I want my work to reflect both technical ability and practical value. In the future, I hope to contribute to teams that build reliable, user-centered applications and to continue evolving through lifelong learning and hands-on experience.
+          My career goal is to grow into a software developer who can contribute to backend, AI, mobile, and full-stack systems while continuing to improve my skills in system design, APIs, cloud tools, and real-world software delivery. I want my work to reflect both technical ability and practical value. In the future, I hope to contribute to teams that build reliable, user-centered applications and to continue evolving through lifelong learning and hands-on experience.
         </p>
       </div>
     </div>
@@ -340,7 +370,7 @@
             <li>Program: Advanced Diploma in Computer Programming &amp; Analysis</li>
             <li>Institution: George Brown College</li>
             <li>Location: Toronto, Ontario</li>
-            <li>Expected Graduation: April 2026</li>
+            <li>Graduated: April 2026</li>
           </ul>
         </div>
         <div class="card">
@@ -361,17 +391,46 @@
   <section id="projects">
     <div class="container">
       <h2>Academic Work Samples</h2>
-      <p class="section-intro">This section highlights major academic projects that demonstrate my development skills, documentation ability, technical growth, and problem-solving approach.</p>
+      <p class="section-intro">This section highlights major academic and independent projects that demonstrate my development skills, documentation ability, technical growth, and problem-solving approach.</p>
       <div class="grid grid-2">
+
+        <!-- ── FEATURED: Rail Incident Analyst ── -->
+        <div class="card project-card card-featured" style="grid-column: 1 / -1;">
+          <div class="badge-featured">&#9733; Featured Project</div>
+          <h3>Rail Incident Analyst Agent</h3>
+          <div class="project-meta">Python &middot; Anthropic Claude API &middot; pandas &middot; Docker &middot; PostgreSQL &middot; pytest</div>
+          <p>
+            An agentic AI pipeline that ingests simulated rail/transit incident reports, classifies each by severity and type using the Claude API, generates corrective-action recommendations, and stores structured results in PostgreSQL — all containerized with Docker.
+          </p>
+          <ul>
+            <li>Built a multi-turn agent loop with structured JSON output, automatic retry on parse failure, and fallback classification to ensure 100% incident coverage even on API errors</li>
+            <li>Used pandas for CSV ingestion, column validation, and deduplication of 20+ realistic Toronto transit incident records</li>
+            <li>Containerized the full stack with Docker and docker-compose; PostgreSQL backend stores results with indexed queries on severity and category</li>
+            <li>Achieved 7/7 unit tests passing (pytest) covering success path, fallback logic, JSON fence-stripping, and analytics aggregation</li>
+            <li>Domain scoped to rail transit — demonstrating applied AI in operational monitoring and incident management contexts</li>
+          </ul>
+          <div style="margin-top: 1rem;">
+            <span class="pill pill-green">Python</span>
+            <span class="pill pill-green">Anthropic API</span>
+            <span class="pill pill-green">Agentic AI</span>
+            <span class="pill pill-green">pandas</span>
+            <span class="pill pill-green">Docker</span>
+            <span class="pill pill-green">PostgreSQL</span>
+            <span class="pill pill-green">pytest</span>
+            <span class="pill pill-green">LLM Integration</span>
+          </div>
+          <p style="margin-top: 1rem;"><strong>Repository:</strong> <a href="https://github.com/NaveedAhmed121/rail-incident-analyst" target="_blank">github.com/NaveedAhmed121/rail-incident-analyst</a></p>
+        </div>
+
         <div class="card project-card">
           <h3>Capstone-SnapCal</h3>
           <img src="images/snapcal-dashboard.jpeg" alt="SnapCal dashboard screen" class="project-image" />
-          <div class="project-meta">COMP3097 Capstone | Kotlin | Android Studio | Jetpack Compose | Health Features</div>
+          <div class="project-meta">COMP3097 Capstone | Kotlin | Android Studio | Jetpack Compose | ML Kit</div>
           <p>SnapCal is a mobile wellness and nutrition tracking application designed to support meal logging, hydration tracking, and healthier daily habits through a clean mobile interface.</p>
           <ul>
             <li>Built as an Android project with Kotlin and Jetpack Compose</li>
+            <li>Integrated Google ML Kit for on-device food image classification</li>
             <li>Repository includes an <code>app</code> module plus supporting Gradle files and HTML preview files</li>
-            <li>Project languages shown on GitHub are mainly HTML and Kotlin</li>
           </ul>
           <p><strong>My Role:</strong> Major contributor to feature development, debugging, UI integration, and overall project implementation.</p>
           <p><strong>Artifacts:</strong> <a href="https://github.com/NaveedAhmed121/Capstone-SnapCal" target="_blank">GitHub Repository</a></p>
@@ -447,6 +506,7 @@
           <p><strong>My Role:</strong> Complete implementation and submission of the assignment.</p>
           <p><strong>Artifacts:</strong> <a href="https://github.com/NaveedAhmed121/COMP3133_101416034_Assignment1" target="_blank">GitHub Repository</a></p>
         </div>
+
       </div>
     </div>
   </section>
@@ -483,14 +543,14 @@
           </div>
 
           <h3>Requirements Analysis and Design</h3>
-<p>
-  The project design focused on usability, simple navigation, structured feature organization, and practical tracking tools for meals, hydration, and wellness habits.
-</p>
+          <p>
+            The project design focused on usability, simple navigation, structured feature organization, and practical tracking tools for meals, hydration, and wellness habits.
+          </p>
 
-<h3>Wireframes / Mockups / Status Reports / System Implementation</h3>
-<p>
-  Development included interface planning, feature implementation, debugging, testing, and refinement through milestone-based academic progress. The system was implemented using Kotlin, Android Studio, and Jetpack Compose.
-</p>
+          <h3>Wireframes / Mockups / Status Reports / System Implementation</h3>
+          <p>
+            Development included interface planning, feature implementation, debugging, testing, and refinement through milestone-based academic progress. The system was implemented using Kotlin, Android Studio, and Jetpack Compose.
+          </p>
         </div>
       </div>
     </div>
@@ -527,10 +587,10 @@
       <div class="card">
         <p>Dear Hiring Manager,</p>
         <p>
-          I am writing to express my interest in a Junior Software Developer position. As a Computer Programming & Analysis student at George Brown College, I have developed practical experience in Java, Spring Boot, Android development, REST APIs, database systems, and collaborative software projects. Through academic coursework and capstone work, I have built applications that demonstrate problem-solving, technical adaptability, and a strong commitment to writing practical, maintainable software.
+          I am writing to express my interest in a Junior Software Developer position. As a Computer Programming &amp; Analysis graduate from George Brown College, I have developed practical experience in Python, Java, Spring Boot, Android development, REST APIs, database systems, and agentic AI pipelines. Through academic coursework, capstone work, and independent projects, I have built applications that demonstrate problem-solving, technical adaptability, and a strong commitment to writing practical, maintainable software.
         </p>
         <p>
-          My experience includes backend development with Java and Spring Boot, mobile development using Kotlin and Android tools, and full-stack academic work involving databases, APIs, GitHub, and project documentation. I am especially interested in opportunities where I can continue growing as a developer while contributing to meaningful software solutions in a collaborative environment.
+          My experience includes building an agentic AI system using the Anthropic Claude API and Docker, backend development with Java and Spring Boot, mobile development using Kotlin and Android tools, and full-stack academic work involving databases, APIs, GitHub, and project documentation. I am especially interested in opportunities where I can continue growing as a developer while contributing to meaningful software solutions in a collaborative environment.
         </p>
         <p>
           Thank you for your time and consideration. I would welcome the opportunity to discuss how my technical background, project experience, and motivation to learn can contribute to your team.
@@ -566,7 +626,7 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 Naveed Ahmed — Career Portfolio</p>
+      <p>&copy; 2026 Naveed Ahmed &mdash; Career Portfolio</p>
     </div>
   </footer>
 </body>
